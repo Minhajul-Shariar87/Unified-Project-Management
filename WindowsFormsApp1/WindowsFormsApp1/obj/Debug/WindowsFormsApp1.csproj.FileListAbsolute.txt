@@ -21,3 +21,5 @@ D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Pepper_Spray.resources
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Safety_Flashlight.resources
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Stun_Gun.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Register.resources

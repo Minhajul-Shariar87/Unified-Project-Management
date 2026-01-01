@@ -133,6 +133,36 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Group_12 {
+            get {
+                object obj = ResourceManager.GetObject("Group 12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_13 {
+            get {
+                object obj = ResourceManager.GetObject("Group 13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_14 {
+            get {
+                object obj = ResourceManager.GetObject("Group 14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap help {
             get {
                 object obj = ResourceManager.GetObject("help", resourceCulture);
@@ -156,6 +186,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap next_3 {
             get {
                 object obj = ResourceManager.GetObject("next 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap register {
+            get {
+                object obj = ResourceManager.GetObject("register", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +256,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap Screenshot_4 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_5 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

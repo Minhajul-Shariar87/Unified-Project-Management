@@ -38,7 +38,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -134,12 +138,44 @@
             this.label1.TabIndex = 54;
             this.label1.Text = "ID";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Group_12;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(363, 619);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(124, 47);
+            this.pictureBox2.TabIndex = 67;
+            this.pictureBox2.TabStop = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(19, 619);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(307, 20);
+            this.dateTimePicker1.TabIndex = 66;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(13, 571);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(198, 35);
+            this.label9.TabIndex = 65;
+            this.label9.Text = "Date and Time";
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(201)))), ((int)(((byte)(183)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
@@ -154,6 +190,7 @@
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +208,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label9;
     }
 }

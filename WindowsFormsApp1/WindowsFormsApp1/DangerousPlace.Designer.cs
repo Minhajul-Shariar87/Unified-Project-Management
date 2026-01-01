@@ -32,7 +32,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,12 +39,17 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,23 +90,16 @@
             this.label6.TabIndex = 41;
             this.label6.Text = "Dangerous Type";
             // 
-            // richTextBox5
-            // 
-            this.richTextBox5.Location = new System.Drawing.Point(406, 118);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(349, 360);
-            this.richTextBox5.TabIndex = 40;
-            this.richTextBox5.Text = "";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(400, 74);
+            this.label5.Location = new System.Drawing.Point(413, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(161, 35);
             this.label5.TabIndex = 39;
             this.label5.Text = "Write News";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label2
             // 
@@ -156,6 +153,72 @@
             this.richTextBox1.TabIndex = 53;
             this.richTextBox1.Text = "";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(416, 332);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(316, 20);
+            this.textBox1.TabIndex = 55;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(410, 294);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(151, 35);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "Written By";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(416, 414);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(316, 20);
+            this.textBox2.TabIndex = 57;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(410, 368);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(129, 35);
+            this.label8.TabIndex = 56;
+            this.label8.Text = "Admin ID";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(410, 446);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(198, 35);
+            this.label9.TabIndex = 58;
+            this.label9.Text = "Date and Time";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.No;
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(416, 494);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(307, 20);
+            this.dateTimePicker1.TabIndex = 59;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Group_12;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(633, 593);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(124, 47);
+            this.pictureBox2.TabIndex = 60;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.next_3;
@@ -176,41 +239,13 @@
             this.panel1.Size = new System.Drawing.Size(589, 1031);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // richTextBox2
             // 
-            this.textBox1.Location = new System.Drawing.Point(416, 534);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 20);
-            this.textBox1.TabIndex = 55;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(410, 496);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 35);
-            this.label7.TabIndex = 54;
-            this.label7.Text = "Written By";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(416, 608);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(316, 20);
-            this.textBox2.TabIndex = 57;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(410, 570);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 35);
-            this.label8.TabIndex = 56;
-            this.label8.Text = "Admin ID";
+            this.richTextBox2.Location = new System.Drawing.Point(416, 102);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(306, 189);
+            this.richTextBox2.TabIndex = 61;
+            this.richTextBox2.Text = "";
             // 
             // DangerousPlace
             // 
@@ -218,6 +253,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(201)))), ((int)(((byte)(183)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox1);
@@ -231,13 +270,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.richTextBox5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "DangerousPlace";
             this.Text = "Dangerous Place";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,7 +291,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richTextBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -264,5 +302,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
