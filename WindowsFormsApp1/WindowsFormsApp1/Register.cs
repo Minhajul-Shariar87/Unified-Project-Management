@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -36,9 +37,100 @@ namespace WindowsFormsApp1
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            HomePage hp = new HomePage();
-            hp.Show();
-            this.Hide();
+            int userid;
+            
+            string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
+            string name = textBox6.Text.Trim();
+            string age = textBox7.Text.Trim();
+
+            if (!int.TryParse(age, out int parsedAge)&&age.Length>2&&age==null)
+            {
+                MessageBox.Show("Age must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string dob = dateTimePicker2.Text;
+            string gender;
+            if (radioButton1.Checked)
+            {
+                gender = radioButton1.Text;
+            }
+            else if (radioButton2.Checked)
+            {
+                gender = radioButton2.Text;
+            }
+            else {
+                gender = radioButton3.Text;
+            }
+
+            string blood_group = textBox5.Text;
+            if (blood_group.Length>2&&blood_group==null) {
+                MessageBox.Show("Blood Group must be valid.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            string dyhap;
+            string pet_name;
+            string breed;
+            if (radioButton4.Checked) {
+                dyhap = radioButton4.Text;
+                pet_name = textBox3.Text;
+                breed = textBox4.Text;
+            } else  { 
+            dyhap= radioButton5.Text;
+                pet_name = "No Information";
+                breed = "No Information";
+            }
+
+            string address = richTextBox2.Text;
+            string phone = textBox1.Text;
+            if (phone.Length>11) {
+                MessageBox.Show("Phone number must be valid.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            string password = textBox2.Text;
+            string dos = dateTimePicker1.Text;
+            
+            string query = "INSERT INTO Register (NAME, AGE, DATE_OF_BIRTH, GENDER,BLOOD_GROUP,PET_Y_N,PET_NAME,BREED,ADDRESS,PHONE,PASSWORD,DATE_AND_TIME) VALUES (@Name, @Age, @Dob, @Gender,@Blood_group,@Pet_y_n,@Pet_name,@Breed,@Address,@Phone,@Password,@Date_and_time)";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Name", name);
+                    command.Parameters.AddWithValue("@Age", parsedAge);
+                    command.Parameters.AddWithValue("@Dob", dob);
+                    command.Parameters.AddWithValue("@Gender", gender);
+                    command.Parameters.AddWithValue("@Blood_group", blood_group);
+                    command.Parameters.AddWithValue("@Pet_y_n", dyhap);
+                    command.Parameters.AddWithValue("@Pet_name", pet_name);
+                    command.Parameters.AddWithValue("@Breed", breed);
+                    command.Parameters.AddWithValue("@Address", address);
+                    command.Parameters.AddWithValue("@Phone", phone);
+                    command.Parameters.AddWithValue("@Password", password);
+                    command.Parameters.AddWithValue("@Date_and_time", dos);
+
+
+                    connection.Open();
+                    
+                    command.CommandText += "; SELECT CAST(SCOPE_IDENTITY() AS INT);";
+                    object result = command.ExecuteScalar();
+                    userid = Convert.ToInt32(result);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        
+                        MessageBox.Show("Profile created successfully! See your ID and password for further access to profile", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Show_ID_and_Pass sip = new Show_ID_and_Pass(userid,password);
+                        sip.Show();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to create the profile. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -46,6 +138,16 @@ namespace WindowsFormsApp1
             Login l = new Login();
             l.Show();
             this.Hide();
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

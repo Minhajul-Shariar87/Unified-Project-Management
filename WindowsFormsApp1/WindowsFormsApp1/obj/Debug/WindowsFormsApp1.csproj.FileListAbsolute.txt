@@ -23,3 +23,4 @@ D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Stun_Gun.resources
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Register.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Show_ID_and_Pass.resources

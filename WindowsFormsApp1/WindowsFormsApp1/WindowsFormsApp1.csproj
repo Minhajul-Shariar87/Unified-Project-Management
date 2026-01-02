@@ -141,6 +141,12 @@
     <Compile Include="Safety_Flashlight.Designer.cs">
       <DependentUpon>Safety_Flashlight.cs</DependentUpon>
     </Compile>
+    <Compile Include="Show_ID_and_Pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_ID_and_Pass.Designer.cs">
+      <DependentUpon>Show_ID_and_Pass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stun_Gun.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Safety_Flashlight.resx">
       <DependentUpon>Safety_Flashlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_ID_and_Pass.resx">
+      <DependentUpon>Show_ID_and_Pass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stun_Gun.resx">
       <DependentUpon>Stun_Gun.cs</DependentUpon>
