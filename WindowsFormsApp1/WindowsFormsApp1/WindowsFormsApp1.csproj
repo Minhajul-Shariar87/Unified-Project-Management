@@ -79,6 +79,12 @@
     <Compile Include="Hire_Volunteer.Designer.cs">
       <DependentUpon>Hire_Volunteer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hire_Volunteer_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hire_Volunteer_Management.Designer.cs">
+      <DependentUpon>Hire_Volunteer_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,24 @@
     <Compile Include="Transportation_Details.Designer.cs">
       <DependentUpon>Transportation_Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transportation_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transportation_Management.Designer.cs">
+      <DependentUpon>Transportation_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transportation_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transportation_Show.Designer.cs">
+      <DependentUpon>Transportation_Show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Volunteer_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Volunteer_Show.Designer.cs">
+      <DependentUpon>Volunteer_Show.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Buy_Items.resx">
       <DependentUpon>Buy_Items.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hire_Volunteer.resx">
       <DependentUpon>Hire_Volunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hire_Volunteer_Management.resx">
+      <DependentUpon>Hire_Volunteer_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
@@ -189,6 +216,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transportation_Details.resx">
       <DependentUpon>Transportation_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transportation_Management.resx">
+      <DependentUpon>Transportation_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transportation_Show.resx">
+      <DependentUpon>Transportation_Show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Volunteer_Show.resx">
+      <DependentUpon>Volunteer_Show.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -274,6 +310,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Group 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spreadsheet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updated1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
