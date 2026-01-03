@@ -38,26 +38,31 @@ namespace WindowsFormsApp1
         {
             Personal_Safety ps= new Personal_Safety();
             ps.Show();
-            
+            this.Hide();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Pepper_Spray ps = new Pepper_Spray();
+            Personal_Safety ps = new Personal_Safety();
             ps.Show();
-
+            this.Hide();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Stun_Gun sg= new Stun_Gun();
-            sg.Show();
+            Personal_Safety ps = new Personal_Safety();
+            ps.Show();
+            this.Hide();
+
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Safety_Flashlight sf= new Safety_Flashlight();
-            sf.Show();
+            Personal_Safety ps = new Personal_Safety();
+            ps.Show();
+
+            this.Hide();
+
         }
     }
 }

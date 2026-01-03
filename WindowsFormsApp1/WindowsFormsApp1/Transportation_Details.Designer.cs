@@ -164,9 +164,9 @@
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(13, 466);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(186, 35);
+            this.label7.Size = new System.Drawing.Size(93, 35);
             this.label7.TabIndex = 50;
-            this.label7.Text = "Safe/Not Safe";
+            this.label7.Text = "Status";
             // 
             // comboBox1
             // 
@@ -224,6 +224,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(124, 47);
             this.pictureBox2.TabIndex = 63;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // dateTimePicker1
             // 

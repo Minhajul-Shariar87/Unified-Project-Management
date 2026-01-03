@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
         {
             string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
             string name = textBox1.Text.Trim();
-            string userId = textBox2.Text;
+            string userId = textBox2.Text.Trim();
             bool flag = false;
            
 
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
 
             //string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
 
-            string query1 = "SELECT COUNT(*) FROM Register WHERE USER_ID = @Id";
+            string query1 = "SELECT COUNT(*) FROM Register WHERE USER_ID = @Id AND NAME = @Name";
             // string query = "SELECT COUNT(*) FROM section WHERE Id = @Id AND Name COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
                 using (SqlCommand command = new SqlCommand(query1, connection))
                 {
                     command.Parameters.AddWithValue("@Id", userId);
-                    //command.Parameters.AddWithValue("@password", password);
+                    command.Parameters.AddWithValue("@Name", name);
 
                     connection.Open();
 
@@ -93,7 +93,15 @@ namespace WindowsFormsApp1
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Name", name);
+                    if (flag)
+                    {
+                        command.Parameters.AddWithValue("@Name", name);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@Name", "ERROR");
+                    }
+                    
                     command.Parameters.AddWithValue("@Report", report_to);
                     command.Parameters.AddWithValue("@Reason", reason);
                     command.Parameters.AddWithValue("@Datetime", dos);
@@ -112,9 +120,7 @@ namespace WindowsFormsApp1
                     if (rowsAffected > 0&& flag)
                     {
                         MessageBox.Show("Report created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //this.Hide();
-                        //Form1 f1 = new Form1();
-                        //f1.Show();
+                        
                     }
                     else
                     {

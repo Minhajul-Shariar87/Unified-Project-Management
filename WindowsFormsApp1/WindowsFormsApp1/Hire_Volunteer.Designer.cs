@@ -30,8 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -66,27 +64,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 496);
+            this.label7.Location = new System.Drawing.Point(13, 412);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 35);
             this.label7.TabIndex = 62;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(19, 376);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(316, 20);
-            this.textBox5.TabIndex = 61;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 338);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 35);
-            this.label4.TabIndex = 60;
-            this.label4.Text = "Gender";
             // 
             // textBox1
             // 
@@ -126,7 +107,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(19, 461);
+            this.textBox2.Location = new System.Drawing.Point(19, 377);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(316, 20);
             this.textBox2.TabIndex = 54;
@@ -146,7 +127,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 423);
+            this.label2.Location = new System.Drawing.Point(13, 339);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(226, 35);
             this.label2.TabIndex = 52;
@@ -164,7 +145,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(19, 540);
+            this.textBox6.Location = new System.Drawing.Point(19, 455);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(316, 20);
             this.textBox6.TabIndex = 64;
@@ -173,7 +154,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 502);
+            this.label5.Location = new System.Drawing.Point(13, 417);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(181, 35);
             this.label5.TabIndex = 63;
@@ -221,6 +202,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(124, 47);
             this.pictureBox2.TabIndex = 73;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // dateTimePicker1
             // 
@@ -257,8 +239,6 @@
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -281,8 +261,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
