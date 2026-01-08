@@ -64,5 +64,12 @@ namespace WindowsFormsApp1
             this.Hide();
 
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Buy_Items_Management bim= new Buy_Items_Management();
+            bim.Show();
+            this.Hide();
+        }
     }
 }

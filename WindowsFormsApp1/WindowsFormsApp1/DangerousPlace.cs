@@ -155,6 +155,13 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DangerousPlace_Management dm = new DangerousPlace_Management();
+            dm.Show();
+            this.Hide();
+        }
     }
     }
 

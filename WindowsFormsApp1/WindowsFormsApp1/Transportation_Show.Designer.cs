@@ -299,6 +299,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Transportation_Show";
             this.Text = "Transportation_Show";
+            this.Load += new System.EventHandler(this.Transportation_Show_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

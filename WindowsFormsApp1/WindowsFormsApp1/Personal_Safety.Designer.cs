@@ -184,6 +184,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Personal_Safety";
             this.Text = "Billing";
+            this.Load += new System.EventHandler(this.Personal_Safety_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

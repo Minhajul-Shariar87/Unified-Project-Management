@@ -135,5 +135,12 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            News_Management nm = new News_Management();
+            nm.Show();
+            this.Hide();
+        }
     }
 }

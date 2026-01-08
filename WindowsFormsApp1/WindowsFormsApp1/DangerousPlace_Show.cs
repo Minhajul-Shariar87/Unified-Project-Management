@@ -12,21 +12,21 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
-    public partial class Transportation_Show : Form
+    public partial class DangerousPlace_Show : Form
     {
         int id;
         string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
 
-        public Transportation_Show(int i)
+        public DangerousPlace_Show(int i)
         {
             id = i;
             InitializeComponent();
             LoadDetails();
-        }
 
+        }
         private void LoadDetails()
         {
-            string query = "SELECT TRANSPORTATION_ID, INCIDENT_TITLE, INCIDENT_TOPIC, WRITTEN_BY,ADMIN_ID,BUS_NAME,STATUS,ROUTE,WRITE_NEWS FROM Transportation WHERE TRANSPORTATION_ID = @Id";
+            string query = "SELECT DANGEROUS_PLACE_ID,DANGEROUS_TYPE,DISTRICT,CITY,POSTAL_CODE,ADDRESS,WRITE_NEWS,WRITTEN_BY,DATE_TIME,ADMIN_ID FROM DangerousPlace WHERE DANGEROUS_PLACE_ID = @Id";
 
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -40,15 +40,15 @@ namespace WindowsFormsApp1
                     if (reader.Read())
                     {
                         // Populate the text boxes with the retrieved data
-                        textBox7.Text = reader["TRANSPORTATION_ID"].ToString();
-                        textBox4.Text = reader["INCIDENT_TITLE"].ToString();
-                        textBox3.Text = reader["INCIDENT_TOPIC"].ToString();
+                        comboBox1.Text = reader["DANGEROUS_TYPE"].ToString();
+                        comboBox2.Text = reader["DISTRICT"].ToString();
+                        comboBox3.Text = reader["CITY"].ToString();
+                        textBox1.Text = reader["POSTAL_CODE"].ToString();
+                        richTextBox1.Text = reader["ADDRESS"].ToString();
+                        richTextBox2.Text = reader["WRITE_NEWS"].ToString();
                         textBox1.Text = reader["WRITTEN_BY"].ToString();
-                        textBox5.Text = reader["ADMIN_ID"].ToString();
-                        textBox2.Text = reader["BUS_NAME"].ToString();
-                        comboBox1.Text = reader["STATUS"].ToString();
-                        textBox6.Text = reader["ROUTE"].ToString();
-                        richTextBox5.Text = reader["WRITE_NEWS"].ToString();
+                        textBox2.Text = reader["ADMIN_ID"].ToString();
+                        textBox3.Text = reader["DANGEROUS_PLACE_ID"].ToString();
                     }
                     else
                     {
@@ -58,37 +58,36 @@ namespace WindowsFormsApp1
                 }
             }
         }
-        public Transportation_Show()
-        {
-            InitializeComponent();
-        }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            string newIncTitle = textBox4.Text.Trim();
-            string newIncTop = textBox3.Text.Trim();
-            string newBus = textBox2.Text;
-            string newStatus = comboBox1.Text;
-            string newRoute= textBox6.Text;
+            string newDT = comboBox1.Text.Trim();
+            string newDist = comboBox2.Text.Trim();
+            string newCity = comboBox3.Text;
+            string newPostal = textBox1.Text.Trim();
+            string newAddress = richTextBox1.Text;
+            string newWrite=richTextBox2.Text;
 
-            if (string.IsNullOrWhiteSpace(newIncTitle) || string.IsNullOrWhiteSpace(newIncTop) ||string.IsNullOrWhiteSpace(newBus)|| string.IsNullOrWhiteSpace(newStatus)|| string.IsNullOrWhiteSpace(newRoute))
+
+            if (string.IsNullOrWhiteSpace(newDT) || string.IsNullOrWhiteSpace(newDist) || string.IsNullOrWhiteSpace(newCity) || string.IsNullOrWhiteSpace(newPostal) || string.IsNullOrWhiteSpace(newAddress)|| string.IsNullOrWhiteSpace(newWrite))
             {
                 MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string query = "UPDATE Transportation SET  INCIDENT_TITLE=@Incident_title, INCIDENT_TOPIC = @Incident_topic, BUS_NAME = @Bus_name, STATUS=@Status, ROUTE= @Route  WHERE TRANSPORTATION_ID = @Id";
+            string query = "UPDATE DangerousPlace SET  DANGEROUS_TYPE=@Dangerous_type, DISTRICT = @District, CITY = @City, POSTAL_CODE=@Postal_code, ADDRESS= @Address , WRITE_NEWS=@Write_news WHERE DANGEROUS_PLACE_ID = @Id";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Id", id);
-                    command.Parameters.AddWithValue("@Incident_title", newIncTitle);
-                    command.Parameters.AddWithValue("@Incident_topic", newIncTop);
-                    command.Parameters.AddWithValue("@Bus_name", newBus);
-                    command.Parameters.AddWithValue("@Status", newStatus);
-                    command.Parameters.AddWithValue("@Route", newRoute);
+                    command.Parameters.AddWithValue("@Dangerous_type", newDT);
+                    command.Parameters.AddWithValue("@District", newDist);
+                    command.Parameters.AddWithValue("@City", newCity);
+                    command.Parameters.AddWithValue("@Postal_code", newPostal);
+                    command.Parameters.AddWithValue("@Address", newAddress);
+                    command.Parameters.AddWithValue("@Write_News", newWrite);
 
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
@@ -104,20 +103,20 @@ namespace WindowsFormsApp1
                     }
                 }
             }
-        }
+            }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-    "Are you sure you want to delete this profile?",
-    "Confirm Deletion",
-    MessageBoxButtons.YesNo,
-    MessageBoxIcon.Warning
+   "Are you sure you want to delete this profile?",
+   "Confirm Deletion",
+   MessageBoxButtons.YesNo,
+   MessageBoxIcon.Warning
 );
 
             if (result == DialogResult.Yes)
             {
-                string query = "DELETE FROM Transportation WHERE TRANSPORTATION_ID = @Id";
+                string query = "DELETE FROM DangerousPlace WHERE DANGEROUS_PLACE_ID = @Id";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -144,14 +143,9 @@ namespace WindowsFormsApp1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Transportation_Management tm = new Transportation_Management();
-            tm.Show();
+            DangerousPlace_Management dangerousPlace_Management = new DangerousPlace_Management();
+            dangerousPlace_Management.Show();
             this.Hide();
-        }
-
-        private void Transportation_Show_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

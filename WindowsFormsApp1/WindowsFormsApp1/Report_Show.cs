@@ -12,21 +12,21 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
-    public partial class Transportation_Show : Form
+    public partial class Report_Show : Form
     {
         int id;
         string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
 
-        public Transportation_Show(int i)
+        public Report_Show(int i)
         {
             id = i;
             InitializeComponent();
             LoadDetails();
-        }
 
+        }
         private void LoadDetails()
         {
-            string query = "SELECT TRANSPORTATION_ID, INCIDENT_TITLE, INCIDENT_TOPIC, WRITTEN_BY,ADMIN_ID,BUS_NAME,STATUS,ROUTE,WRITE_NEWS FROM Transportation WHERE TRANSPORTATION_ID = @Id";
+            string query = "SELECT REPORT_ID,USERNAME,REPORT_TO,REASON,USER_ID FROM REPORT WHERE REPORT_ID = @Id";
 
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -40,15 +40,12 @@ namespace WindowsFormsApp1
                     if (reader.Read())
                     {
                         // Populate the text boxes with the retrieved data
-                        textBox7.Text = reader["TRANSPORTATION_ID"].ToString();
-                        textBox4.Text = reader["INCIDENT_TITLE"].ToString();
-                        textBox3.Text = reader["INCIDENT_TOPIC"].ToString();
-                        textBox1.Text = reader["WRITTEN_BY"].ToString();
-                        textBox5.Text = reader["ADMIN_ID"].ToString();
-                        textBox2.Text = reader["BUS_NAME"].ToString();
-                        comboBox1.Text = reader["STATUS"].ToString();
-                        textBox6.Text = reader["ROUTE"].ToString();
-                        richTextBox5.Text = reader["WRITE_NEWS"].ToString();
+                        textBox1.Text = reader["USERNAME"].ToString();
+                        textBox2.Text = reader["USER_ID"].ToString();
+                        textBox3.Text = reader["REPORT_ID"].ToString();
+                        comboBox1.Text = reader["REPORT_TO"].ToString();
+                        richTextBox1.Text = reader["REASON"].ToString();
+
                     }
                     else
                     {
@@ -58,37 +55,34 @@ namespace WindowsFormsApp1
                 }
             }
         }
-        public Transportation_Show()
+
+        private void Report_Show_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
-            string newIncTitle = textBox4.Text.Trim();
-            string newIncTop = textBox3.Text.Trim();
-            string newBus = textBox2.Text;
-            string newStatus = comboBox1.Text;
-            string newRoute= textBox6.Text;
+            string newReport_To = comboBox1.Text.Trim();
+            string newReason = richTextBox1.Text;
+            
 
-            if (string.IsNullOrWhiteSpace(newIncTitle) || string.IsNullOrWhiteSpace(newIncTop) ||string.IsNullOrWhiteSpace(newBus)|| string.IsNullOrWhiteSpace(newStatus)|| string.IsNullOrWhiteSpace(newRoute))
+            if (string.IsNullOrWhiteSpace(newReport_To) || string.IsNullOrWhiteSpace(newReason))
             {
                 MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string query = "UPDATE Transportation SET  INCIDENT_TITLE=@Incident_title, INCIDENT_TOPIC = @Incident_topic, BUS_NAME = @Bus_name, STATUS=@Status, ROUTE= @Route  WHERE TRANSPORTATION_ID = @Id";
+            string query = "UPDATE Report SET REPORT_TO= @Report_to, REASON = @Reason WHERE REPORT_ID = @Id";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Id", id);
-                    command.Parameters.AddWithValue("@Incident_title", newIncTitle);
-                    command.Parameters.AddWithValue("@Incident_topic", newIncTop);
-                    command.Parameters.AddWithValue("@Bus_name", newBus);
-                    command.Parameters.AddWithValue("@Status", newStatus);
-                    command.Parameters.AddWithValue("@Route", newRoute);
+                    command.Parameters.AddWithValue("@Report_to",newReport_To);
+                    command.Parameters.AddWithValue("@Reason", newReason);
+                  
 
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
@@ -106,18 +100,18 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-    "Are you sure you want to delete this profile?",
-    "Confirm Deletion",
-    MessageBoxButtons.YesNo,
-    MessageBoxIcon.Warning
+   "Are you sure you want to delete this profile?",
+   "Confirm Deletion",
+   MessageBoxButtons.YesNo,
+   MessageBoxIcon.Warning
 );
 
             if (result == DialogResult.Yes)
             {
-                string query = "DELETE FROM Transportation WHERE TRANSPORTATION_ID = @Id";
+                string query = "DELETE FROM Report WHERE REPORT_ID = @Id";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -144,14 +138,9 @@ namespace WindowsFormsApp1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Transportation_Management tm = new Transportation_Management();
-            tm.Show();
+            Report_Management rm = new Report_Management();
+            rm.Show();
             this.Hide();
-        }
-
-        private void Transportation_Show_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

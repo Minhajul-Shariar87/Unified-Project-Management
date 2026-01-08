@@ -67,11 +67,35 @@
     <Compile Include="Buy_Items.Designer.cs">
       <DependentUpon>Buy_Items.cs</DependentUpon>
     </Compile>
+    <Compile Include="Buy_Items_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy_Items_Management.Designer.cs">
+      <DependentUpon>Buy_Items_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buy_Items_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy_Items_Show.Designer.cs">
+      <DependentUpon>Buy_Items_Show.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangerousPlace.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DangerousPlace.Designer.cs">
       <DependentUpon>DangerousPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangerousPlace_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangerousPlace_Management.Designer.cs">
+      <DependentUpon>DangerousPlace_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangerousPlace_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangerousPlace_Show.Designer.cs">
+      <DependentUpon>DangerousPlace_Show.cs</DependentUpon>
     </Compile>
     <Compile Include="Hire_Volunteer.cs">
       <SubType>Form</SubType>
@@ -109,6 +133,18 @@
     <Compile Include="News.Designer.cs">
       <DependentUpon>News.cs</DependentUpon>
     </Compile>
+    <Compile Include="News_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="News_Management.Designer.cs">
+      <DependentUpon>News_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="News_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="News_Show.Designer.cs">
+      <DependentUpon>News_Show.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personal_Safety.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +170,18 @@
     </Compile>
     <Compile Include="ReportPolice.Designer.cs">
       <DependentUpon>ReportPolice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Management.Designer.cs">
+      <DependentUpon>Report_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Show.Designer.cs">
+      <DependentUpon>Report_Show.cs</DependentUpon>
     </Compile>
     <Compile Include="Show_ID_and_Pass.cs">
       <SubType>Form</SubType>
@@ -168,8 +216,20 @@
     <EmbeddedResource Include="Buy_Items.resx">
       <DependentUpon>Buy_Items.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Buy_Items_Management.resx">
+      <DependentUpon>Buy_Items_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy_Items_Show.resx">
+      <DependentUpon>Buy_Items_Show.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangerousPlace.resx">
       <DependentUpon>DangerousPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangerousPlace_Management.resx">
+      <DependentUpon>DangerousPlace_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangerousPlace_Show.resx">
+      <DependentUpon>DangerousPlace_Show.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hire_Volunteer.resx">
       <DependentUpon>Hire_Volunteer.cs</DependentUpon>
@@ -188,6 +248,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="News.resx">
       <DependentUpon>News.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News_Management.resx">
+      <DependentUpon>News_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News_Show.resx">
+      <DependentUpon>News_Show.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personal_Safety.resx">
       <DependentUpon>Personal_Safety.cs</DependentUpon>
@@ -210,6 +276,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportPolice.resx">
       <DependentUpon>ReportPolice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Management.resx">
+      <DependentUpon>Report_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Show.resx">
+      <DependentUpon>Report_Show.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Show_ID_and_Pass.resx">
       <DependentUpon>Show_ID_and_Pass.cs</DependentUpon>

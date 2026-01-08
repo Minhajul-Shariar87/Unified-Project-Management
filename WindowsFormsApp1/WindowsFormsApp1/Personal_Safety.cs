@@ -180,5 +180,10 @@ namespace WindowsFormsApp1
         {
             CalculateTotalPrice();
         }
+
+        private void Personal_Safety_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

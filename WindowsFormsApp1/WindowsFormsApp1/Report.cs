@@ -129,5 +129,12 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Report_Management rm = new Report_Management();
+            rm.Show();
+            this.Hide();
+        }
     }
 }
