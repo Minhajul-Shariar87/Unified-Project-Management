@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -207,6 +207,78 @@
     <Compile Include="Transportation_Show.Designer.cs">
       <DependentUpon>Transportation_Show.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Billing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Billing.Designer.cs">
+      <DependentUpon>User_Billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Dangerous_Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Dangerous_Map.Designer.cs">
+      <DependentUpon>User_Dangerous_Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Dangerous_Map_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Dangerous_Map_Show.Designer.cs">
+      <DependentUpon>User_Dangerous_Map_Show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Home_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Home_Page.Designer.cs">
+      <DependentUpon>User_Home_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_News.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_News.Designer.cs">
+      <DependentUpon>User_News.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_News_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_News_Show.Designer.cs">
+      <DependentUpon>User_News_Show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Report.Designer.cs">
+      <DependentUpon>User_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Report_Police.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Report_Police.Designer.cs">
+      <DependentUpon>User_Report_Police.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Shopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Shopping.Designer.cs">
+      <DependentUpon>User_Shopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Transportation_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Transportation_Details.Designer.cs">
+      <DependentUpon>User_Transportation_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Transportation_Details_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Transportation_Details_Show.Designer.cs">
+      <DependentUpon>User_Transportation_Details_Show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Volunteer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Volunteer.Designer.cs">
+      <DependentUpon>User_Volunteer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Volunteer_Show.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +366,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transportation_Show.resx">
       <DependentUpon>Transportation_Show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Home_Page.resx">
+      <DependentUpon>User_Home_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_News.resx">
+      <DependentUpon>User_News.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_News_Show.resx">
+      <DependentUpon>User_News_Show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Report_Police.resx">
+      <DependentUpon>User_Report_Police.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Volunteer_Show.resx">
       <DependentUpon>Volunteer_Show.cs</DependentUpon>

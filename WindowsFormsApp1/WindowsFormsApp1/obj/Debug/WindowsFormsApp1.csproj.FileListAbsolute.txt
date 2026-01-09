@@ -33,3 +33,7 @@ D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Buy_Items_Show.resources
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DangerousPlace_Management.resources
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DangerousPlace_Show.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Home_Page.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_News.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Report_Police.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_News_Show.resources
