@@ -285,6 +285,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DangerousPlace_Show";
             this.Text = "Dangerous Place Show";
+            this.Load += new System.EventHandler(this.DangerousPlace_Show_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

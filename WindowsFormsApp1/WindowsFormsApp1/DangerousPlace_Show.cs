@@ -147,5 +147,10 @@ namespace WindowsFormsApp1
             dangerousPlace_Management.Show();
             this.Hide();
         }
+
+        private void DangerousPlace_Show_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

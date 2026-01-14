@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,108 @@ namespace WindowsFormsApp1
         public User_Volunteer()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
+            string name = textBox4.Text.Trim();
+            string id = textBox7.Text.Trim();
+            bool flag = false;
+
+
+
+
+            //string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
+
+            string query1 = "SELECT COUNT(*) FROM Register WHERE USER_ID = @Id AND NAME = @Name";
+            // string query = "SELECT COUNT(*) FROM section WHERE Id = @Id AND Name COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query1, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", id);
+                    command.Parameters.AddWithValue("@Name", name);
+
+                    connection.Open();
+
+                    int count = (int)command.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("ID and Name Found!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        flag = true;
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Id / Name.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            string age = textBox1.Text.Trim();
+            string insname = textBox2.Text;
+            if (!int.TryParse(age, out int parsedAge))
+            {
+                MessageBox.Show("Age must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string insin = textBox6.Text;
+            string ques = richTextBox1.Text;
+            string dos = dateTimePicker1.Text;
+            string query = "INSERT INTO Volunteer (NAME,USER_ID,AGE,INSTITUTION_NAME,INTERESTED_IN,QUESTION_ANSWER,DATE) VALUES (@Name, @Id, @Age, @Institution_name,@Interested_in,@Question_answer,@Date)";
+
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    if (flag)
+                    {
+                        command.Parameters.AddWithValue("@Name", name);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@Name", "ERROR");
+                    }
+                    if (flag)
+                    {
+                        command.Parameters.AddWithValue("@Id", id);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@Id", 0);
+                    }
+
+                    command.Parameters.AddWithValue("@Age", parsedAge);
+                    command.Parameters.AddWithValue("@Institution_name", insname);
+                    command.Parameters.AddWithValue("@Interested_in", insin);
+                    command.Parameters.AddWithValue("@Question_answer", ques);
+                    command.Parameters.AddWithValue("@Date", dos);
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0 && flag)
+                    {
+                        MessageBox.Show("Profile created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to create the profile. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            User_HomePage2 user_HomePage2 = new User_HomePage2();
+            user_HomePage2.Show();
+            this.Hide();
         }
     }
 }

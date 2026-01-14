@@ -225,6 +225,12 @@
     <Compile Include="User_Dangerous_Map_Show.Designer.cs">
       <DependentUpon>User_Dangerous_Map_Show.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_HomePage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_HomePage2.Designer.cs">
+      <DependentUpon>User_HomePage2.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Home_Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -373,6 +379,12 @@
     <EmbeddedResource Include="User_Dangerous_Map.resx">
       <DependentUpon>User_Dangerous_Map.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User_Dangerous_Map_Show.resx">
+      <DependentUpon>User_Dangerous_Map_Show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_HomePage2.resx">
+      <DependentUpon>User_HomePage2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_Home_Page.resx">
       <DependentUpon>User_Home_Page.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +399,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Report_Police.resx">
       <DependentUpon>User_Report_Police.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Shopping.resx">
+      <DependentUpon>User_Shopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Transportation_Details.resx">
+      <DependentUpon>User_Transportation_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Transportation_Details_Show.resx">
+      <DependentUpon>User_Transportation_Details_Show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Volunteer.resx">
+      <DependentUpon>User_Volunteer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Volunteer_Show.resx">
       <DependentUpon>Volunteer_Show.cs</DependentUpon>

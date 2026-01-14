@@ -123,5 +123,10 @@ namespace WindowsFormsApp1
             string query = "SELECT * FROM DangerousPlace ";
             FillDataGridView(query);
         }
+
+        private void DangerousPlace_Management_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

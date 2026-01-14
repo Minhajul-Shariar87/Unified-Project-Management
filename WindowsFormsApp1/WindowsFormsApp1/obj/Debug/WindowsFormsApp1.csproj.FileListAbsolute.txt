@@ -38,3 +38,11 @@ D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Report_Police.resources
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_News_Show.resources
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Report.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Billing.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Dangerous_Map.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Dangerous_Map_Show.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_HomePage2.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Shopping.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Transportation_Details.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Transportation_Details_Show.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Volunteer.resources

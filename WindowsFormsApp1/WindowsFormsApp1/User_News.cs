@@ -102,6 +102,7 @@ namespace WindowsFormsApp1
                 {
                     User_News_Show ns = new User_News_Show(selectedId);
                     ns.Show();
+                    this.Hide();
                 }
                 else
                 {

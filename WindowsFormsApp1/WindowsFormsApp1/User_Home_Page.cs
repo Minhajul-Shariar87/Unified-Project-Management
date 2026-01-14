@@ -37,5 +37,26 @@ namespace WindowsFormsApp1
             user_News.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            User_HomePage2 user_Home_Page = new User_HomePage2();
+            user_Home_Page.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            User_Dangerous_Map user_Dangerous_Map = new User_Dangerous_Map();
+            user_Dangerous_Map.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            User_Transportation_Details user_Transportation_Details = new User_Transportation_Details();
+            user_Transportation_Details.Show();
+            this.Hide();
+        }
     }
 }
