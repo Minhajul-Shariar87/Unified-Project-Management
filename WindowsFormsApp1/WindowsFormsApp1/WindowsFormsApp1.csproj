@@ -367,6 +367,12 @@
     <EmbeddedResource Include="Transportation_Show.resx">
       <DependentUpon>Transportation_Show.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User_Billing.resx">
+      <DependentUpon>User_Billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Dangerous_Map.resx">
+      <DependentUpon>User_Dangerous_Map.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_Home_Page.resx">
       <DependentUpon>User_Home_Page.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_News_Show.resx">
       <DependentUpon>User_News_Show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Report.resx">
+      <DependentUpon>User_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Report_Police.resx">
       <DependentUpon>User_Report_Police.cs</DependentUpon>
