@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
                     if (count > 0)
                     {
                         MessageBox.Show("User Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        User_Home_Page hp = new User_Home_Page();
+                       User_Dashboard hp = new User_Dashboard();
                         hp.Show();
                         this.Hide();
 

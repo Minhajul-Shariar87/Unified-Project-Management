@@ -151,6 +151,18 @@
     <Compile Include="Personal_Safety.Designer.cs">
       <DependentUpon>Personal_Safety.cs</DependentUpon>
     </Compile>
+    <Compile Include="Police_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Police_Report.Designer.cs">
+      <DependentUpon>Police_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Police_Report_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Police_Report_Show.Designer.cs">
+      <DependentUpon>Police_Report_Show.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs">
@@ -224,6 +236,12 @@
     </Compile>
     <Compile Include="User_Dangerous_Map_Show.Designer.cs">
       <DependentUpon>User_Dangerous_Map_Show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Dashboard.Designer.cs">
+      <DependentUpon>User_Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="User_HomePage2.cs">
       <SubType>Form</SubType>
@@ -336,6 +354,12 @@
     <EmbeddedResource Include="Personal_Safety.resx">
       <DependentUpon>Personal_Safety.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Police_Report.resx">
+      <DependentUpon>Police_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Police_Report_Show.resx">
+      <DependentUpon>Police_Report_Show.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -381,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Dangerous_Map_Show.resx">
       <DependentUpon>User_Dangerous_Map_Show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Dashboard.resx">
+      <DependentUpon>User_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_HomePage2.resx">
       <DependentUpon>User_HomePage2.cs</DependentUpon>
@@ -520,6 +547,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pawprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orphanage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\womens-day.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Social Services Have a Major Gap, Leaving Homeless___.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WOMEN.jfif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

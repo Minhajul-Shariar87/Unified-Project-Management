@@ -46,3 +46,6 @@ D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Transportation_Details.resources
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Transportation_Details_Show.resources
 D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Volunteer.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Police_Report.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Police_Report_Show.resources
+D:\Women Protection\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.User_Dashboard.resources

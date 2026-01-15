@@ -121,11 +121,23 @@
   <data name="Screenshot_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dangerous" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dangerous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="womens-day" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\womens-day.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="download (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download (2).jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orphanage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orphanage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group 13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,6 +151,9 @@
   <data name="register" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\register.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pawprint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pawprint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,9 +166,6 @@
   <data name="Screenshot_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot_11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,14 +175,23 @@
   <data name="spreadsheet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spreadsheet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="download (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download (1).jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot_5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cards" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cards.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Social Services Have a Major Gap, Leaving Homeless___" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Social Services Have a Major Gap, Leaving Homeless___.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Screenshot_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,6 +214,9 @@
   <data name="Screenshot_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,7 +232,7 @@
   <data name="Screenshot_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WOMEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WOMEN.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
