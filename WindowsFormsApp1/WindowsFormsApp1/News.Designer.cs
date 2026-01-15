@@ -211,6 +211,7 @@
             // 
             this.pictureBox4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.spreadsheet;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Location = new System.Drawing.Point(689, 12);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(66, 53);

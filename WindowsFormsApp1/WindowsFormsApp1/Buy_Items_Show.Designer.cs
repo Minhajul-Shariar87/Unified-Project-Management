@@ -48,6 +48,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Personal Safety Alarm",
@@ -84,6 +85,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(108, 27);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(137, 20);
@@ -91,6 +94,8 @@
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(108, 60);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(137, 20);
@@ -161,6 +166,8 @@
             // 
             // textBox6
             // 
+            this.textBox6.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(316, 27);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(137, 20);

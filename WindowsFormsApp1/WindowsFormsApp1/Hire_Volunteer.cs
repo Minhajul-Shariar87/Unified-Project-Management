@@ -35,6 +35,11 @@ namespace WindowsFormsApp1
             string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
             string name = textBox4.Text.Trim();
             string id = textBox7.Text.Trim();
+            if (!int.TryParse(id, out int parsedId))
+            {
+                MessageBox.Show("ID must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             bool flag = false;
 
 
@@ -42,14 +47,14 @@ namespace WindowsFormsApp1
 
             //string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
 
-            string query1 = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND NAME = @Name";
-            // string query = "SELECT COUNT(*) FROM section WHERE Id = @Id AND Name COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
+            //string query1 = "SELECT COUNT(*) FROM Register WHERE ADMIN_ID = @Id AND NAME = @Name";
+             string query1 = "SELECT COUNT(*) FROM Register WHERE USER_ID = @Id AND NAME COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query1, connection))
                 {
-                    command.Parameters.AddWithValue("@Id", id);
+                    command.Parameters.AddWithValue("@Id", parsedId);
                     command.Parameters.AddWithValue("@Name", name);
 
                     connection.Open();
@@ -77,9 +82,19 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Age must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (age.Length > 2 || age.Length < 1 || int.Parse(age) < 1)
+            {
+                MessageBox.Show("Age must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string insin = textBox6.Text;
             string ques = richTextBox1.Text;
             string dos = dateTimePicker1.Text;
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(id) || string.IsNullOrEmpty(age) || string.IsNullOrEmpty(insname)|| string.IsNullOrEmpty(insin)|| string.IsNullOrEmpty(insname)|| string.IsNullOrEmpty(ques))
+            {
+                MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string query = "INSERT INTO Volunteer (NAME,USER_ID,AGE,INSTITUTION_NAME,INTERESTED_IN,QUESTION_ANSWER,DATE) VALUES (@Name, @Id, @Age, @Institution_name,@Interested_in,@Question_answer,@Date)";
 
 
@@ -93,7 +108,8 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        command.Parameters.AddWithValue("@Name", "ERROR");
+                        //command.Parameters.AddWithValue("@Name", "ERROR");
+                        return;
                     }
                     if (flag)
                     {
@@ -101,7 +117,8 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        command.Parameters.AddWithValue("@Id", 0);
+                        //command.Parameters.AddWithValue("@Id", 0);
+                        return;
                     }
                     
                     command.Parameters.AddWithValue("@Age", parsedAge);
@@ -130,6 +147,11 @@ namespace WindowsFormsApp1
             Hire_Volunteer_Management hm = new Hire_Volunteer_Management();
             hm.Show();
             this.Hide();
+        }
+
+        private void Hire_Volunteer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

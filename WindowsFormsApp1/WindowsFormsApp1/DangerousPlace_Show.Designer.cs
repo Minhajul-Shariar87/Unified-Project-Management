@@ -65,6 +65,8 @@
             // 
             // textBox3
             // 
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(410, 431);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(316, 20);
@@ -82,6 +84,8 @@
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(410, 349);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(316, 20);
@@ -228,6 +232,8 @@
             // 
             // textBox4
             // 
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(413, 517);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(316, 20);
@@ -237,6 +243,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.bin;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Location = new System.Drawing.Point(694, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(53, 53);
@@ -248,6 +255,7 @@
             // 
             this.pictureBox4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.updated;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Location = new System.Drawing.Point(574, 11);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(56, 53);

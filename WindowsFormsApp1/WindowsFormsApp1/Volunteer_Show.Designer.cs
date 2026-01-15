@@ -55,6 +55,8 @@
             // 
             // textBox7
             // 
+            this.textBox7.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(19, 249);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(316, 20);
@@ -130,6 +132,8 @@
             // 
             // textBox4
             // 
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(19, 173);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(316, 20);
@@ -176,6 +180,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.bin;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Location = new System.Drawing.Point(528, 26);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 53);
@@ -187,6 +192,7 @@
             // 
             this.pictureBox4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.updated;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Location = new System.Drawing.Point(408, 26);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(56, 53);
@@ -227,6 +233,8 @@
             // 
             // textBox5
             // 
+            this.textBox5.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(19, 112);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(316, 20);

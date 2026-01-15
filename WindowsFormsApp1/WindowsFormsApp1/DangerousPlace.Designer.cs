@@ -125,7 +125,12 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "SAFE",
+            "NEUTRAL",
+            "RISK"});
             this.comboBox1.Location = new System.Drawing.Point(19, 112);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(316, 21);
@@ -133,7 +138,10 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "DHAKA"});
             this.comboBox2.Location = new System.Drawing.Point(19, 188);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(316, 21);
@@ -141,7 +149,17 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "UTTARA",
+            "NIKUNJA",
+            "MIRPUR",
+            "KHILKHET",
+            "DHANMANDI",
+            "MOHAMMADPUR",
+            "SHYAMOLI",
+            "BASHUNDHARA"});
             this.comboBox3.Location = new System.Drawing.Point(19, 261);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(316, 21);
@@ -254,6 +272,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.spreadsheet;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Location = new System.Drawing.Point(691, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(66, 53);
@@ -291,6 +310,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DangerousPlace";
             this.Text = "Dangerous Place";
+            this.Load += new System.EventHandler(this.DangerousPlace_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

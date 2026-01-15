@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WindowsFormsApp1
 {
@@ -47,6 +48,11 @@ namespace WindowsFormsApp1
             string topic = textBox3.Text.Trim();
             string written_by = textBox1.Text.Trim();
             string id = textBox5.Text.Trim();
+            if (!int.TryParse(id, out int parsedId))
+            {
+                MessageBox.Show("ID must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             bool flag = false;
 
 
@@ -54,14 +60,14 @@ namespace WindowsFormsApp1
 
             //string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
 
-            string query1 = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND NAME = @Name";
-            // string query = "SELECT COUNT(*) FROM section WHERE Id = @Id AND Name COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
+            //string query1 = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND NAME = @Name";
+            string query1 = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND NAME COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query1, connection))
                 {
-                    command.Parameters.AddWithValue("@Id", id);
+                    command.Parameters.AddWithValue("@Id", parsedId);
                     command.Parameters.AddWithValue("@Name", written_by);
 
                     connection.Open();
@@ -90,6 +96,11 @@ namespace WindowsFormsApp1
             string refName = textBox2.Text;
             string dos = dateTimePicker1.Text;
             string write_news = richTextBox5.Text;
+            if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(topic) || string.IsNullOrWhiteSpace(written_by) || string.IsNullOrWhiteSpace(id)|| string.IsNullOrEmpty(refName)|| string.IsNullOrEmpty(write_news))
+            {
+                MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string query = "INSERT INTO News (TITLE,TOPIC,WRITTEN_BY,ADMIN_ID,REFERANCE_NAME,DATE,WRITE_NEWS) VALUES (@Title, @Topic, @Written_by, @Admin_id,@Referance_name,@Date,@Write_news)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -104,15 +115,17 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        command.Parameters.AddWithValue("@Written_by", "ERROR");
+                        //command.Parameters.AddWithValue("@Written_by", "ERROR");
+                        return;
                     }
                     if (flag)
                     {
-                        command.Parameters.AddWithValue("@Admin_id", id);
+                        command.Parameters.AddWithValue("@Admin_id", parsedId);
                     }
                     else
                     {
-                        command.Parameters.AddWithValue("@Admin_id", 0);
+                        // command.Parameters.AddWithValue("@Admin_id", 0);
+                        return;
                     }
                     
                     command.Parameters.AddWithValue("@Referance_name", refName);

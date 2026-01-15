@@ -69,6 +69,11 @@ namespace WindowsFormsApp1
             string written_by = textBox1.Text;
             string dos = dateTimePicker1.Text;
             string id = textBox2.Text;
+            if (!int.TryParse(id, out int parsedId))
+            {
+                MessageBox.Show("ID must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             bool flag = false;
 
@@ -77,15 +82,17 @@ namespace WindowsFormsApp1
 
             //string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
 
-            string query1 = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND NAME = @Name";
-            // string query = "SELECT COUNT(*) FROM section WHERE Id = @Id AND Name COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
+           // string query1 = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND NAME = @Name";
+             string query1 = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND NAME COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query1, connection))
                 {
-                    command.Parameters.AddWithValue("@Id",id );
+                    command.Parameters.AddWithValue("@Id",parsedId);
                     command.Parameters.AddWithValue("@Name", written_by);
+
+
 
                     connection.Open();
 
@@ -106,7 +113,11 @@ namespace WindowsFormsApp1
                 }
             }
 
-
+            if (string.IsNullOrWhiteSpace(dt) || string.IsNullOrWhiteSpace(district) || string.IsNullOrEmpty(city) || string.IsNullOrEmpty(postal)|| string.IsNullOrEmpty(address)|| string.IsNullOrEmpty(write_news)|| string.IsNullOrEmpty(written_by)|| string.IsNullOrEmpty(id))
+            {
+                MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             string query = "INSERT INTO DangerousPlace (DANGEROUS_TYPE,DISTRICT,CITY,POSTAL_CODE,ADDRESS,WRITE_NEWS,WRITTEN_BY,DATE_TIME,ADMIN_ID) VALUES (@Dangerous_type, @District, @City, @Postal_code,@Address,@Write_news,@Written_by,@Date_time,@Admin_id)";
 
@@ -126,17 +137,19 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        command.Parameters.AddWithValue("@Written_by", "ERROR");
+                        //command.Parameters.AddWithValue("@Written_by", "ERROR");
+                        return;
                     }
                  
                     command.Parameters.AddWithValue("@Date_time", dos);
                     if (flag)
                     {
-                        command.Parameters.AddWithValue("@Admin_id", id);
+                        command.Parameters.AddWithValue("@Admin_id", parsedId);
                     }
                     else
                     {
-                        command.Parameters.AddWithValue("@Admin_id", 0);
+                        // command.Parameters.AddWithValue("@Admin_id", 0);
+                        return;
                     }
                     
 
@@ -161,6 +174,11 @@ namespace WindowsFormsApp1
             DangerousPlace_Management dm = new DangerousPlace_Management();
             dm.Show();
             this.Hide();
+        }
+
+        private void DangerousPlace_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }

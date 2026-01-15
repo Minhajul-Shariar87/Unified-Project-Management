@@ -196,6 +196,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.spreadsheet;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Location = new System.Drawing.Point(680, 23);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(66, 53);
@@ -264,6 +265,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Hire_Volunteer";
             this.Text = "Hire Volunteer";
+            this.Load += new System.EventHandler(this.Hire_Volunteer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

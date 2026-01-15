@@ -53,6 +53,8 @@
             // 
             // textBox5
             // 
+            this.textBox5.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(13, 425);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(316, 20);
@@ -70,6 +72,8 @@
             // 
             // textBox4
             // 
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(13, 340);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(316, 20);
@@ -186,6 +190,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(12, 130);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(316, 20);
@@ -195,6 +201,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.bin;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Location = new System.Drawing.Point(679, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(53, 53);
@@ -206,6 +213,7 @@
             // 
             this.pictureBox4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.updated;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Location = new System.Drawing.Point(559, 12);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(56, 53);
@@ -237,6 +245,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.No;
+            this.Enabled = false;
             this.Name = "News_Show";
             this.Text = "News_Show";
             this.Load += new System.EventHandler(this.News_Show_Load);
