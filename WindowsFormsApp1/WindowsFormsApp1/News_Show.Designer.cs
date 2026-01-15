@@ -246,7 +246,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.No;
-            this.Enabled = false;
             this.Name = "News_Show";
             this.Text = "News_Show";
             this.Load += new System.EventHandler(this.News_Show_Load);

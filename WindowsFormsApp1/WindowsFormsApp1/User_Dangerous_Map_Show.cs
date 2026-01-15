@@ -46,9 +46,9 @@ namespace WindowsFormsApp1
                         textBox1.Text = reader["POSTAL_CODE"].ToString();
                         richTextBox1.Text = reader["ADDRESS"].ToString();
                         richTextBox2.Text = reader["WRITE_NEWS"].ToString();
-                        textBox1.Text = reader["WRITTEN_BY"].ToString();
-                        textBox2.Text = reader["ADMIN_ID"].ToString();
-                        textBox3.Text = reader["DANGEROUS_PLACE_ID"].ToString();
+                        textBox2.Text = reader["WRITTEN_BY"].ToString();
+                        textBox3.Text = reader["ADMIN_ID"].ToString();
+                        textBox4.Text = reader["DANGEROUS_PLACE_ID"].ToString();
                     }
                     else
                     {

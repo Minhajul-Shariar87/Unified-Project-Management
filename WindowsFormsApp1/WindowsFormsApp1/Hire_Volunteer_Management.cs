@@ -106,6 +106,7 @@ namespace WindowsFormsApp1
                 {
                     Volunteer_Show vs = new Volunteer_Show(selectedId);
                     vs.Show();
+                    this.Hide();
                 }
                 else
                 {

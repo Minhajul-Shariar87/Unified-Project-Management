@@ -162,10 +162,13 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Alif",
-            "Zaman"});
+            "SM MUSHFIQUR RAHMAN",
+            "SM TAJWAR TAHMID",
+            "RAFA JAHAN",
+            "MD MINHAJUL SHARIAR ZAMAN ALIF"});
             this.comboBox1.Location = new System.Drawing.Point(19, 270);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(308, 21);

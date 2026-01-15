@@ -117,6 +117,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Report_Management";
             this.Text = "Report_Management";
+            this.Load += new System.EventHandler(this.Report_Management_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

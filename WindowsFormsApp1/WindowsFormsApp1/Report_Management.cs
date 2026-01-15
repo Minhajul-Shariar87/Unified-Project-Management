@@ -99,6 +99,7 @@ namespace WindowsFormsApp1
                 {
                     Report_Show rs = new Report_Show(selectedId);
                     rs.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -118,6 +119,11 @@ namespace WindowsFormsApp1
         {
             string query = "SELECT * FROM Report ";
             FillDataGridView(query);
+        }
+
+        private void Report_Management_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

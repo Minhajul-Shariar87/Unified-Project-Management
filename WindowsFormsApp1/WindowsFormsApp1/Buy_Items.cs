@@ -32,27 +32,28 @@ namespace WindowsFormsApp1
             HomePage2 hp2 = new HomePage2();
             hp2.Show();
             this.Hide();
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Personal_Safety ps= new Personal_Safety();
             ps.Show();
-            this.Hide();
+            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Personal_Safety ps = new Personal_Safety();
             ps.Show();
-            this.Hide();
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Personal_Safety ps = new Personal_Safety();
             ps.Show();
-            this.Hide();
+           
 
         }
 
@@ -61,7 +62,7 @@ namespace WindowsFormsApp1
             Personal_Safety ps = new Personal_Safety();
             ps.Show();
 
-            this.Hide();
+            
 
         }
 
@@ -69,7 +70,7 @@ namespace WindowsFormsApp1
         {
             Buy_Items_Management bim= new Buy_Items_Management();
             bim.Show();
-            this.Hide();
+            
         }
     }
 }

@@ -53,6 +53,7 @@ namespace WindowsFormsApp1
                 {
                     DangerousPlace_Show vs = new DangerousPlace_Show(selectedId);
                     vs.Show();
+                    this.Hide();
                 }
                 else
                 {

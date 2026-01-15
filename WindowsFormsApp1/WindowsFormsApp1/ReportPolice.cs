@@ -85,6 +85,11 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Age must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (age.Length > 2 || age.Length < 1 || int.Parse(age) < 1)
+            {
+                MessageBox.Show("Age must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string address = richTextBox5.Text;
             string dos = dateTimePicker1.Text;
             if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(id) || string.IsNullOrEmpty(age) || string.IsNullOrEmpty(district)|| string.IsNullOrEmpty(address))

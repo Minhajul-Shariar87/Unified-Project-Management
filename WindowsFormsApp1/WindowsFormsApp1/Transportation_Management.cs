@@ -55,6 +55,7 @@ namespace WindowsFormsApp1
                 {
                    Transportation_Show vs = new Transportation_Show(selectedId);
                     vs.Show();
+                    this.Hide();
                 }
                 else
                 {

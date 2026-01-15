@@ -77,7 +77,6 @@
             // comboBox1
             // 
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.No;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Safe",
@@ -100,6 +99,7 @@
             // textBox5
             // 
             this.textBox5.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(13, 415);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(316, 20);
@@ -108,6 +108,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.No;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 377);
             this.label4.Name = "label4";
@@ -118,6 +119,7 @@
             // textBox1
             // 
             this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(13, 330);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(316, 20);
@@ -126,6 +128,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.No;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 292);
             this.label3.Name = "label3";
@@ -212,6 +215,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(124, 47);
             this.pictureBox2.TabIndex = 96;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -260,6 +264,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.No;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(7, 80);
             this.label9.Name = "label9";
@@ -270,6 +275,7 @@
             // textBox7
             // 
             this.textBox7.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(13, 118);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(316, 20);
@@ -305,7 +311,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "Transportation_Show";
-            this.Text = "Transportation_Show";
+            this.Text = "Transportation Show";
             this.Load += new System.EventHandler(this.Transportation_Show_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

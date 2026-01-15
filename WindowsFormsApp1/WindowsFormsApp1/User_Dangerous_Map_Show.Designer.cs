@@ -53,7 +53,7 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.No;
+            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.richTextBox2.Enabled = false;
             this.richTextBox2.Location = new System.Drawing.Point(410, 116);
             this.richTextBox2.Name = "richTextBox2";
@@ -85,6 +85,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Default;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(407, 468);
             this.label9.Name = "label9";
@@ -95,6 +96,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(404, 382);
             this.label8.Name = "label8";
@@ -115,6 +117,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(404, 308);
             this.label7.Name = "label7";
@@ -124,7 +127,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Location = new System.Drawing.Point(13, 438);
             this.richTextBox1.Name = "richTextBox1";
@@ -135,7 +138,7 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.Cursor = System.Windows.Forms.Cursors.No;
+            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Default;
             this.comboBox3.Enabled = false;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(13, 257);
@@ -146,7 +149,7 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.No;
+            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.comboBox2.Enabled = false;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(13, 184);
@@ -157,7 +160,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(13, 108);
@@ -168,7 +171,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(13, 342);
             this.textBox1.Name = "textBox1";
@@ -179,6 +182,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 304);
             this.label4.Name = "label4";
@@ -189,6 +193,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 219);
             this.label3.Name = "label3";
@@ -199,6 +204,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Default;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(7, 70);
             this.label6.Name = "label6";
@@ -209,6 +215,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Default;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(407, 76);
             this.label5.Name = "label5";
@@ -219,6 +226,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 389);
             this.label2.Name = "label2";
@@ -229,6 +237,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 146);
             this.label1.Name = "label1";
@@ -239,6 +248,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.download__2_;
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(775, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(589, 1031);
