@@ -51,10 +51,13 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Alif",
-            "Zaman"});
+            "SM MUSHFIQUR RAHMAN",
+            "SM TAJWAR TAHMID",
+            "RAFA JAHAN",
+            "MD MINHAJUL SHARIAR ZAMAN ALIF"});
             this.comboBox1.Location = new System.Drawing.Point(13, 269);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(308, 21);
@@ -62,6 +65,8 @@
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(13, 187);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(314, 20);
@@ -69,6 +74,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(13, 111);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(314, 20);
@@ -164,6 +171,7 @@
             // 
             this.pictureBox4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.bin;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Location = new System.Drawing.Point(621, 23);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(53, 53);
@@ -175,6 +183,7 @@
             // 
             this.pictureBox5.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.updated;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Location = new System.Drawing.Point(501, 23);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(56, 53);
@@ -194,6 +203,8 @@
             // 
             // textBox3
             // 
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(397, 187);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(314, 20);
@@ -221,6 +232,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "Report_Show";
             this.Text = "Report Show";
             this.Load += new System.EventHandler(this.Report_Show_Load);

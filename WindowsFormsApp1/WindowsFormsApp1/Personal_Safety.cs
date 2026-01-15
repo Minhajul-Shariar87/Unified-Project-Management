@@ -9,6 +9,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
@@ -24,6 +25,11 @@ namespace WindowsFormsApp1
             string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
             string name = textBox4.Text.Trim();
             string id = textBox1.Text.Trim();
+            if (!int.TryParse(id, out int parsedId))
+            {
+                MessageBox.Show("ID must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             bool flag = false;
 
 
@@ -31,14 +37,14 @@ namespace WindowsFormsApp1
 
             //string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
 
-            string query1 = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND NAME = @Name";
-            // string query = "SELECT COUNT(*) FROM section WHERE Id = @Id AND Name COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
+           // string query1 = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND NAME = @Name";
+             string query1 = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND NAME COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query1, connection))
                 {
-                    command.Parameters.AddWithValue("@Id", id);
+                    command.Parameters.AddWithValue("@Id", parsedId);
                     command.Parameters.AddWithValue("@Name", name);
 
                     connection.Open();
@@ -72,12 +78,22 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Qunatity must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (int.Parse(quantity) < 0)
+            {
+                MessageBox.Show("Qunatity must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string tp = textBox5.Text.Trim();
 
             
             if (!int.TryParse(tp, out int parsedTp))
             {
                 MessageBox.Show("Total price must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(id) || string.IsNullOrEmpty(product) || string.IsNullOrEmpty(quantity))
+            {
+                MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string query = "INSERT INTO Billing (NAME,ID,PRODUCT,UNIT_PRICE,QUANTITY,TOTAL_PRICE) VALUES (@Name, @Id, @Product, @Unit_price,@Quantity,@Total_price)";
@@ -92,15 +108,17 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        command.Parameters.AddWithValue("@Name", "ERROR");
+                        // command.Parameters.AddWithValue("@Name", "ERROR");
+                        return;
                     }
                     if (flag)
                     {
-                        command.Parameters.AddWithValue("@Id", id);
+                        command.Parameters.AddWithValue("@Id", parsedId);
                     }
                     else
                     {
-                        command.Parameters.AddWithValue("@Id", 0);
+                        // command.Parameters.AddWithValue("@Id", 0);
+                        return;
                     }
                     
                     

@@ -63,21 +63,24 @@ namespace WindowsFormsApp1
             }
 
             string blood_group = textBox5.Text;
-            if (blood_group.Length>2&&blood_group==null) {
+            if (blood_group.Length>3&&blood_group.Length<1&&blood_group==null&&((blood_group!="A+")|| (blood_group != "B+")|| (blood_group != "A-")|| (blood_group != "B-")|| (blood_group != "AB+")|| (blood_group != "AB-")|| (blood_group != "O+")|| (blood_group != "O+"))) {
                 MessageBox.Show("Blood Group must be valid.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             string dyhap;
             string pet_name;
             string breed;
+            bool check = false;
             if (radioButton4.Checked) {
                 dyhap = radioButton4.Text;
                 pet_name = textBox3.Text;
                 breed = textBox4.Text;
+                check = true;
             } else  { 
             dyhap= radioButton5.Text;
                 pet_name = "No Information";
                 breed = "No Information";
+                check = false;
             }
 
             string address = richTextBox2.Text;
@@ -85,10 +88,30 @@ namespace WindowsFormsApp1
             if (phone.Length>11) {
                 MessageBox.Show("Phone number must be valid.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            if (!int.TryParse(phone, out int parsedPhone))
+            {
+                MessageBox.Show("Phone no must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string password = textBox2.Text;
             string dos = dateTimePicker1.Text;
-            
-            string query = "INSERT INTO Register (NAME, AGE, DATE_OF_BIRTH, GENDER,BLOOD_GROUP,PET_Y_N,PET_NAME,BREED,ADDRESS,PHONE,PASSWORD,DATE_AND_TIME) VALUES (@Name, @Age, @Dob, @Gender,@Blood_group,@Pet_y_n,@Pet_name,@Breed,@Address,@Phone,@Password,@Date_and_time)";
+            if (check)
+            {
+                if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(age) || string.IsNullOrEmpty(blood_group) || string.IsNullOrEmpty(dyhap) || string.IsNullOrEmpty(pet_name) || string.IsNullOrEmpty(breed) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(phone) || string.IsNullOrEmpty(password))
+                {
+                    MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            else {
+                if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(age) || string.IsNullOrEmpty(blood_group) || string.IsNullOrEmpty(dyhap)|| string.IsNullOrEmpty(address) || string.IsNullOrEmpty(phone) || string.IsNullOrEmpty(password))
+                {
+                    MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+                string query = "INSERT INTO Register (NAME, AGE, DATE_OF_BIRTH, GENDER,BLOOD_GROUP,PET_Y_N,PET_NAME,BREED,ADDRESS,PHONE,PASSWORD,DATE_AND_TIME) VALUES (@Name, @Age, @Dob, @Gender,@Blood_group,@Pet_y_n,@Pet_name,@Breed,@Address,@Phone,@Password,@Date_and_time)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -103,7 +126,7 @@ namespace WindowsFormsApp1
                     command.Parameters.AddWithValue("@Pet_name", pet_name);
                     command.Parameters.AddWithValue("@Breed", breed);
                     command.Parameters.AddWithValue("@Address", address);
-                    command.Parameters.AddWithValue("@Phone", phone);
+                    command.Parameters.AddWithValue("@Phone", parsedPhone);
                     command.Parameters.AddWithValue("@Password", password);
                     command.Parameters.AddWithValue("@Date_and_time", dos);
 
