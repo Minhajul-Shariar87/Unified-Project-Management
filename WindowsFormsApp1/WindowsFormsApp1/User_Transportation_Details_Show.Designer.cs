@@ -53,6 +53,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(387, 159);
             this.textBox6.Name = "textBox6";
@@ -71,6 +72,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -93,6 +95,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(13, 407);
             this.textBox5.Name = "textBox5";
@@ -111,6 +114,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(13, 322);
             this.textBox1.Name = "textBox1";
@@ -141,6 +145,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(13, 110);
             this.textBox7.Name = "textBox7";
@@ -149,6 +154,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(13, 173);
             this.textBox4.Name = "textBox4";
@@ -157,6 +163,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(13, 249);
             this.textBox3.Name = "textBox3";
@@ -175,6 +182,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(13, 492);
             this.textBox2.Name = "textBox2";
@@ -193,6 +201,7 @@
             // 
             // richTextBox5
             // 
+            this.richTextBox5.Cursor = System.Windows.Forms.Cursors.No;
             this.richTextBox5.Enabled = false;
             this.richTextBox5.Location = new System.Drawing.Point(400, 248);
             this.richTextBox5.Name = "richTextBox5";

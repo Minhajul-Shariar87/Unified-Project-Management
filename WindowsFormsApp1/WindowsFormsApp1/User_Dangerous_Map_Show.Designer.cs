@@ -53,6 +53,7 @@
             // 
             // richTextBox2
             // 
+            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.No;
             this.richTextBox2.Enabled = false;
             this.richTextBox2.Location = new System.Drawing.Point(410, 116);
             this.richTextBox2.Name = "richTextBox2";
@@ -63,6 +64,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(413, 514);
             this.textBox4.Name = "textBox4";
@@ -72,6 +74,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(410, 428);
             this.textBox3.Name = "textBox3";
@@ -101,6 +104,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(410, 346);
             this.textBox2.Name = "textBox2";
@@ -120,6 +124,7 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Location = new System.Drawing.Point(13, 438);
             this.richTextBox1.Name = "richTextBox1";
@@ -130,6 +135,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.Cursor = System.Windows.Forms.Cursors.No;
             this.comboBox3.Enabled = false;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(13, 257);
@@ -140,6 +146,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.Cursor = System.Windows.Forms.Cursors.No;
             this.comboBox2.Enabled = false;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(13, 184);
@@ -150,6 +157,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(13, 108);
@@ -160,6 +168,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(13, 342);
             this.textBox1.Name = "textBox1";
@@ -273,6 +282,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.No;
             this.Name = "User_Dangerous_Map_Show";
             this.Text = "Dangerous Map Show";
             this.Load += new System.EventHandler(this.User_Dangerous_Map_Show_Load);

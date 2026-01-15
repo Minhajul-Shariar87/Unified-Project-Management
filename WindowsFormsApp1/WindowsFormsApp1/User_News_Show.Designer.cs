@@ -59,6 +59,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(13, 338);
             this.textBox4.Name = "textBox4";
@@ -77,6 +78,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(12, 128);
             this.textBox1.Name = "textBox1";
@@ -85,6 +87,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(13, 194);
             this.textBox2.Name = "textBox2";
@@ -93,6 +96,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(13, 265);
             this.textBox3.Name = "textBox3";
@@ -111,6 +115,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(13, 502);
             this.textBox6.Name = "textBox6";
@@ -129,6 +134,7 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Location = new System.Drawing.Point(400, 137);
             this.richTextBox1.Name = "richTextBox1";
@@ -188,6 +194,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(13, 423);
             this.textBox5.Name = "textBox5";
@@ -216,6 +223,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.No;
             this.Name = "User_News_Show";
             this.Text = "News Show";
             this.Load += new System.EventHandler(this.User_News_Show_Load);

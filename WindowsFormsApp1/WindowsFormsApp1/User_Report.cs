@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
@@ -28,6 +29,11 @@ namespace WindowsFormsApp1
             string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
             string name = textBox1.Text.Trim();
             string userId = textBox2.Text.Trim();
+            if (!int.TryParse(userId, out int parseduserId))
+            {
+                MessageBox.Show("User ID must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             bool flag = false;
 
 
@@ -35,14 +41,14 @@ namespace WindowsFormsApp1
 
             //string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
 
-            string query1 = "SELECT COUNT(*) FROM Register WHERE USER_ID = @Id AND NAME = @Name";
-            // string query = "SELECT COUNT(*) FROM section WHERE Id = @Id AND Name COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
+            //string query1 = "SELECT COUNT(*) FROM Register WHERE USER_ID = @Id AND NAME = @Name";
+             string query1 = "SELECT COUNT(*) FROM Register WHERE USER_ID = @Id AND Name COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query1, connection))
                 {
-                    command.Parameters.AddWithValue("@Id", userId);
+                    command.Parameters.AddWithValue("@Id", parseduserId);
                     command.Parameters.AddWithValue("@Name", name);
 
                     connection.Open();
@@ -73,6 +79,11 @@ namespace WindowsFormsApp1
             string report_to = comboBox1.Text;
             string reason = richTextBox1.Text;
             string dos = dateTimePicker1.Text;
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(report_to) || string.IsNullOrEmpty(reason))
+            {
+                MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             string query = "INSERT INTO Report (USERNAME, REPORT_TO,REASON, DATE_TIME,USER_ID) VALUES (@Name, @Report, @Reason, @Datetime,@id)";
 
@@ -94,7 +105,7 @@ namespace WindowsFormsApp1
                     command.Parameters.AddWithValue("@Datetime", dos);
                     if (flag)
                     {
-                        command.Parameters.AddWithValue("@id", userId);
+                        command.Parameters.AddWithValue("@id", parseduserId);
                     }
                     else
                     {

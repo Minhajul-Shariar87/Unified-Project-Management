@@ -36,7 +36,11 @@ namespace WindowsFormsApp1
         {
             string userId = textBox6.Text;
             string password = textBox7.Text;
-
+            if (!int.TryParse(userId, out int parseduserId))
+            {
+                MessageBox.Show("ID must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter both Id and Name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -45,8 +49,8 @@ namespace WindowsFormsApp1
 
             string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
 
-            string query = "SELECT COUNT(*) FROM Register WHERE USER_ID = @Id AND PASSWORD = @password";
-            // string query = "SELECT COUNT(*) FROM section WHERE Id = @Id AND Name COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
+            //string query = "SELECT COUNT(*) FROM Register WHERE USER_ID = @Id AND PASSWORD = @password";
+             string query = "SELECT COUNT(*) FROM Register WHERE USER_ID = @Id AND PASSWORD COLLATE SQL_Latin1_General_CP1_CS_AS = @password";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -54,6 +58,7 @@ namespace WindowsFormsApp1
                 {
                     command.Parameters.AddWithValue("@Id", userId);
                     command.Parameters.AddWithValue("@password", password);
+
 
                     connection.Open();
 
@@ -94,8 +99,8 @@ namespace WindowsFormsApp1
 
             string connectionString = "data source=DESKTOP-N5C571F\\SQLEXPRESS; database=Women_Protection; integrated security=SSPI";
 
-            string query = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND PASSWORD = @password";
-            // string query = "SELECT COUNT(*) FROM section WHERE Id = @Id AND Name COLLATE SQL_Latin1_General_CP1_CS_AS = @Name";
+            //string query = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND PASSWORD = @password";
+             string query = "SELECT COUNT(*) FROM Admin WHERE ADMIN_ID = @Id AND PASSWORD COLLATE SQL_Latin1_General_CP1_CS_AS = @password";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -103,6 +108,11 @@ namespace WindowsFormsApp1
                 {
                     command.Parameters.AddWithValue("@Id", userId);
                     command.Parameters.AddWithValue("@password", password);
+                    if (!int.TryParse(userId, out int parseduserId))
+                    {
+                        MessageBox.Show("ID must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
                     connection.Open();
 
@@ -110,7 +120,7 @@ namespace WindowsFormsApp1
 
                     if (count > 0)
                     {
-                        MessageBox.Show(" Admin Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Admin Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         HomePage hp = new HomePage();
                         hp.Show();
                         this.Hide();

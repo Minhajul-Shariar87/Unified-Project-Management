@@ -249,6 +249,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "User_Volunteer";
             this.Text = "Volunteer";
+            this.Load += new System.EventHandler(this.User_Volunteer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

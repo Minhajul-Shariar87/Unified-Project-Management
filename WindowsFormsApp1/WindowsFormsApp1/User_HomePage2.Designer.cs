@@ -144,7 +144,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "User_HomePage2";
-            this.Text = "User_HomePage2";
+            this.Text = "HomePage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

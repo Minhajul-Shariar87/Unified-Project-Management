@@ -72,6 +72,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.loading_arrow;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Location = new System.Drawing.Point(563, 84);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(33, 29);
@@ -83,6 +84,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.file;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Location = new System.Drawing.Point(507, 84);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 29);
@@ -94,6 +96,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.search;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Location = new System.Drawing.Point(452, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 29);
@@ -112,6 +115,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "User_Dangerous_Map";
             this.Text = "Dangerous Map";
             this.Load += new System.EventHandler(this.User_Dangerous_Map_Load);
